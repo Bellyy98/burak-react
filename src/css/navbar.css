@@ -175,3 +175,87 @@
     background-repeat: no-repeat;
     filter: invert(20%);
    }
+
+
+
+   /* Other Mavbar */
+
+   .other-navbar {
+    width: 100%;
+    height: 400px;
+
+    display: flex;
+    background: url("/public/img/banner.webp");
+    background-size: cover;
+}
+
+.other-navbar .navbar-container {
+    margin-top: 55px;
+}
+
+.other-navbar .navbar-container .menu {
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.other-navbar .navbar-container .menu .brand-logo{
+    width: 125px;
+    height: 30px;
+}
+
+.other-navbar .navbar-container .menu  .links{
+    min-width: 700px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.other-navbar .navbar-container .menu .links .login-button{
+   background: #3776cc;
+   color: #f8f8ff;
+}
+
+.other-navbar .navbar-container .menu .links .user-avatar{
+   width: 50px;
+   height: 50px;
+   border-radius: 24px;
+ } 
+
+.other-navbar a {
+    text-decoration: none;
+}
+
+.other-navbar .hover-line a {
+    color: #f8f8ff;
+    z-index: 100;
+}
+
+.other-navbar .underline {
+    display: block;
+    content: "";
+    border-bottom: solid 2px #d7b686;
+}
+
+/* bu yaxshi example copy pass qilsa boladi doim */
+.other-navbar .hover-line:after {
+    display: block;
+    content: "";
+    border-bottom: solid 2px #d7b686;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.other-navbar .hover-line:hover:after {
+    transform: scaleX(1);
+}
+
+.other-navbar div.hover-line:after {
+    transform-origin: 0% 50%;
+}
