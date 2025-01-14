@@ -32,7 +32,7 @@ export default function OtherNavbar () {
               </Box>
              ) : null}
              <Box className="hover-line">
-                <NavLink to="/help"> Help </NavLink>
+                <NavLink to="/help" activeClassName={"underline"}> Help </NavLink>
              </Box>
              {/* BASKET */}
              <Basket/>
