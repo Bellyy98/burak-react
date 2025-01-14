@@ -1,10 +1,52 @@
 .home-navbar {
     width: 100%;
     height: 773px;
+
     display: flex;
     background: url("/public/img/banner.webp");
     background-size: cover;
 }
+
+.home-navbar .navbar-container {
+    height: 642px;
+
+    margin-top: 55px;
+}
+
+.home-navbar .navbar-container .menu {
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-navbar .navbar-container .menu .brand-logo{
+    width: 125px;
+    height: 30px;
+}
+
+.home-navbar .navbar-container .menu  .links{
+    min-width: 700px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.home-navbar .navbar-container .menu .links .login-button{
+   background: #3776cc;
+   color: #f8f8ff;
+}
+
+.home-navbar .navbar-container .menu .links .user-avatar{
+   width: 50px;
+   height: 50px;
+   border-radius: 24px;
+ } 
 
 .home-navbar a {
     text-decoration: none;
