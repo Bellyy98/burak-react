@@ -259,3 +259,139 @@
 .other-navbar div.hover-line:after {
     transform-origin: 0% 50%;
 }
+
+/* BASKET */
+
+.basket-frame {
+    position: relative;
+    padding: 10px 4px 0px 4px;
+    width: 450px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #f8f8ff;
+    border-radius: 16px;
+  }
+  
+  .basket-frame .all-check-box {
+    padding: 0px 6px;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #d7b586;
+    border-width: 1px 0px;
+    border-style: solid;
+    border-color: #343434;
+  }
+  
+  .basket-frame .basket-info-box {
+    position: relative;
+    margin-top: 6px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .basket-info-box .product-img {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 29px;
+  }
+  
+  .basket-info-box .product-name {
+    margin-left: 11px;
+    width: 185px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+  }
+  
+  .basket-info-box .product-price {
+    width: 80px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #ae0000;
+  }
+  
+  .basket-info-box
+    .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+    padding: 6.5px 14px;
+  }
+  
+  .basket-info-box .css-ece9u5 {
+    min-width: 72px;
+  }
+  
+  .basket-frame .cancel-btn {
+    position: absolute;
+    top: 33%;
+    right: 2%;
+    cursor: pointer;
+  }
+  
+  .basket-frame .basket-order {
+    margin-top: 10px;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .basket-order .price {
+    width: 200px;
+    display: flex;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+  }
+  
+  .basket-frame .orders-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  
+  .basket-frame .orders-wrapper::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .basket-frame .orders-wrapper::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+  }
+  
+  .basket-frame .orders-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .basket-frame .orders-main-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+  }
+  

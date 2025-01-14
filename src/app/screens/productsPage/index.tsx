@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 
-export function ProductsPage() {
+export default function ProductsPage() {
     return <Container>ProductsPage</Container>;
   }
   
