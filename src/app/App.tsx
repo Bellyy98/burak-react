@@ -16,6 +16,7 @@ import "../css/footer.css"
 import HelpPage from "./screens/helpPage";
 
 
+
 function App() {
   const location = useLocation()
   return (
