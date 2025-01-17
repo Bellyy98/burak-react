@@ -7,10 +7,9 @@ import CardCover  from "@mui/joy/CardCover";
 import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
 import CardOverflow from '@mui/joy/CardOverflow';
-import Divider from '@mui/joy/Divider';
 import VisibilityIcon from "@mui/icons-material/Visibility"
 import DescriptionOutLinedIcon from "@mui/icons-material/DescriptionOutlined"
-
+import Divider from "../../components/divider";
 
 const list  = [
     { productName: "Lavash", imagePath: "/img/lavash.webp"},
@@ -47,6 +46,7 @@ export default function PopularDishes () {
                              >
                             {ele.productName}
                         </Typography>
+                        {/* <Divider width="1" height="23" bg="#d9d9d9"/> */}
                             <Typography
                             sx={{
                                 fontWeight:"md",
