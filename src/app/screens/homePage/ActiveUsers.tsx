@@ -24,7 +24,7 @@ export default function ActiveUsers () {
                     activeUsers.map((ele, index) => {
                         return (
                <CssVarsProvider>
-               <Card variant="outlined" sx={{ width: 320 }}>
+               <Card variant="outlined" sx={{ width: 305,marginRight:"10px"}}>
                 <CardOverflow>
                 <AspectRatio  className="membeer-image1">
                     <img src={ele.memberImage} alt=""/>
