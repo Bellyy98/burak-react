@@ -233,3 +233,25 @@ color: rgb(215, 181, 134);
     line-height: 34px;
     color: #e3c08d;
 }
+
+
+/* ADVERTISEMENT */
+
+.homepage .ads-restaurant-frame {
+    width: 100%;
+    height: 692px;
+    display: flex;
+    overflow: hidden;
+    transform: perspective(0px);
+    box-shadow: -3px 0px 20px 14px #34343480;
+}
+
+.homepage .ads-restaurant-frame .ads-video {
+    width: 100%;
+    background: #0c0e12;
+    display: flex;
+    box-shadow: 0px -8px 90px rgb(215 215 255);
+    transform: scale(1.7);  
+    /* transform: scale(1.7);  video ni polniy ekran qilip beradi scale */
+    overflow: hidden;
+}
