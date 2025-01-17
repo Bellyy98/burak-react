@@ -3,23 +3,50 @@
     height: auto;
 }
 
-.homepage .statis-frame {
+/* STATISTICS */
+
+.homepage .static-frame {
     width: 100%;
     height: 236px;
 
-    background: rgb(52, 52, 52);
+    background: #343434;
 }
 
-.homepage .statis-frame .static {
+.homepage .static-frame .info {
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
-.homepage .statis-frame .static .static-1box {
+.homepage .static-frame .info .static-box {
     width: 200px;
     height: 116px;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+}
+
+.homepage .static-frame .info .static-box .static-num {
+    font-family: Poppins;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 80px;
+    font-style: normal;
+    text-align: center;
+    color: #d7b686;
+}
+
+
+.homepage .static-frame .info .static-box .static-text{
+font-family: Poppins;
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0%;
+text-align: center;
+color: rgb(215, 181, 134);
 }

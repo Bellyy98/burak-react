@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import ActiveUsers from "./ActiveUsers";
 import Advertisement from "./Advertisement";
 import Events from "./Events";
@@ -8,7 +8,7 @@ import Statistics from "./Statistics";
 import "../../../css/home.css"
 
 export default function HomePage() {
-    return <div className="homepage">
+    return <div className={"homepage"}>
       <Statistics/>
       <PopularDishes/>
       <FreshMenu/>
