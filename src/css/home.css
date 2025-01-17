@@ -103,6 +103,22 @@ color: rgb(215, 181, 134);
     linear-gradient(to top,  rgba(0,0,0,0.8),  rgba(0,0,0,0) 300px)
 }
 
+
+.homepage .popular-dishes-frame .no-data {
+    width: 100%;
+    height: 300px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-family: "Pappins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #e3c08d;
+}
+
 /* NEW PRODUCTS */
 
 .homepage .new-products-frame {
@@ -201,4 +217,19 @@ color: rgb(215, 181, 134);
     display: flex;
     align-items: center;
     font-weight: 500;
+}
+
+.homepage .new-products-frame .no-data {
+    width: 100%;
+    height: 300px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-family: "Pappins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #e3c08d;
 }

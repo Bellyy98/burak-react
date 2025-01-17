@@ -24,7 +24,8 @@ export default function FreshMenu () {
               <Box className="category-title">Fresh Menu</Box>
               <Stack className="card-frame">
                 <CssVarsProvider>
-                    {freshMenu.map((ele, index) => {
+                    {freshMenu.length !== 0 ? (
+                       freshMenu.map((ele, index) => {
                         return (
                             <Card key={index} variant="outlined" className="card">
                                 <CardOverflow>
@@ -55,7 +56,10 @@ export default function FreshMenu () {
                                 </CardOverflow>
                             </Card>
                         )
-                    })}
+                    }) 
+                    ) : (
+                        <Box className="no-data">New products are not available!</Box>
+                    )}
                 </CssVarsProvider>
               </Stack>
             </Stack>
