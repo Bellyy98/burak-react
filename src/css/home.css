@@ -50,3 +50,55 @@ letter-spacing: 0%;
 text-align: center;
 color: rgb(215, 181, 134);
 }
+
+
+/* POPULAR DISHES */
+
+
+.homepage .popular-dishes-frame {
+    width: 100%;
+    height: 580px;
+    display: flex;
+
+    background: rgb(248, 248, 255);
+}
+
+.homepage .popular-dishes-frame .popular-section{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homepage .popular-dishes-frame .popular-section .category-title {
+    font-family: Roboto Serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: 4%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.homepage .popular-dishes-frame .popular-section .cards-frame {
+    width: 100%;
+    margin-top: 43px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.homepage .popular-dishes-frame .cards-frame .card {
+    min-height: 430px;
+    min-width: 300px;
+    cursor: pointer;
+}
+
+.homepage .popular-dishes-frame .cards-frame .card .card-cover {
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0) 200px
+    ),
+    linear-gradient(to top,  rgba(0,0,0,0.8),  rgba(0,0,0,0) 300px)
+}
