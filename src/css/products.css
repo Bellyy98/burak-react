@@ -1,0 +1,400 @@
+.products-page {
+   position: relative;
+   width: 100%;
+   height: auto;
+   background: #f8f8ff;
+}
+
+
+/* Products */
+
+.products {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgb(248, 248, 255);
+}
+
+.products .avatar-big-box {
+    width: 820px;
+    height: 46px;
+    margin-top: 83px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.products .avatar-big-box .avatar-text-box{
+   margin-left: 100px;
+    font-family: Roboto Serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: 0%;
+    text-align: left;
+    color: rgb(52, 52, 52)
+}
+
+.products .avatar-big-box .avatar-search{
+    position: relative;
+   width: 360px;
+   height: 28px;
+
+    display: flex;
+    flex: row ;
+    justify-content: space-between;
+   box-sizing: border-box;
+   border: 1px solid rgb(255, 255, 255);
+   border-radius: 18.5px;
+
+   box-shadow: 0px 4px 4px 0px rgba(213, 213, 213, 0.25);
+   background: rgb(255, 252, 252);
+}
+
+.products .avatar-big-box .avatar-search .search-input{
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 18.5px;
+    
+    box-shadow: 0px 4px 4px 0px rgba(213, 213, 213, 0.25);
+    background: rgb(255, 252, 252);
+ }
+
+.products .avatar-big-box .avatar-search .search-botton{
+ position: absolute;
+  width: 106px;
+  height: 32px;
+  margin-left: 255px;
+  border-radius: 18.5px;
+  background: rgb(52, 52, 52);
+ }
+ 
+ .products .dishes-filter-section {
+    width: 260px;
+    height: 36px;
+
+    margin-top: 71px;
+    margin-left: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+
+ .products .dishes-filter-section .order{
+   width: 70px;
+   height: 100%;
+
+   border-radius: 8px;
+ }
+
+ .products .list-category-section{
+    width: 100%;
+    height: 764px;
+
+    margin-top: 56px;
+    display: flex;
+    flex-direction: row;
+ }
+
+ .products .list-category-section .second-button {
+    width: 36px;
+    height: 389px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+
+ .products .list-category-section  .second-button .order-2{
+    width: 26x;
+    height: 76px;
+
+    margin-top: 56px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+ }
+
+ .products .product-wrapper {
+   margin-left: 35px;
+   width: 100%;
+   height: auto;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+ }
+
+ .products .product-wrapper .product-card {
+   width: 273px;
+   height: auto;
+   
+   margin-top: 40px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   /* background: url("/public/img/cutlet.webp"); */
+ }
+
+ .products .product-wrapper .product-img {
+   position: relative;
+   width: 273px;
+   height: 275px;
+
+   border-radius: 0px 50px 0px 0px;
+   
+   background: rgb(196, 196, 196);
+ }
+
+ .products .product-wrapper .product-img::before {
+  border-radius: 0px 50px 0px 0px;
+  content: "";
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+ }
+
+ .products .product-wrapper .product-img:hover::before {
+  border-radius: 0px 50px 0px 0px;
+  opacity: 1;
+ }
+
+ .products .product-wrapper .product-img img {
+   position: absolute;
+   display: block;
+   max-width: 100%;
+   height: auto;
+   z-index: 1; }
+
+
+ .products .product-wrapper .product-sale{
+   position: absolute;
+   width: 90px;
+   height: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 25px;
+   box-shadow: 4px 6px 20px 0px rgba(0, 0, 0, 0.1);
+   background: rgb(255, 146, 0);
+   color: rgb(255, 255, 255);
+   font-family: Poppins;
+   font-size: 12px;
+   font-weight: 600;
+   line-height: 18px;
+   letter-spacing: 0%;
+   text-align: left;
+ }
+
+ .products .product-wrapper .shop-btn {
+  position: absolute;
+  padding: 20px;
+  width: 64px;
+  height: 46px; 
+
+  margin-left: 105px;
+  margin-top: 217px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background: rgb(198 0 255 / 66%);
+  border: 2px solid #d7b686;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 15px;
+  color: #f8f8ff;
+ }
+
+ .products .product-img:hover .shop-btn {
+   opacity: 1;
+ }
+
+ .products .product-img:hover .view-btn {
+   opacity: 1;
+ }
+
+ .products .product-wrapper .view-btn {
+   position: absolute;
+   min-width: 40px;
+   width: 40px;
+   height: 40px;
+   margin-top: 223px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   cursor: pointer;
+   z-index: 3;
+   opacity: 0;
+   transition: opacity 0.5s ease;
+   background: rgba(0, 0, 0, 0.4);
+   border-radius: 50%;
+   background: rgb(50, 50, 51);
+ }
+
+
+ .products .product-wrapper .product-desc {
+   width: 40px;
+   height: 30px;
+
+   margin-top: 18px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: rgb(52, 52, 52);
+ }
+
+ .products .product-wrapper .product-desc .product-title {
+margin-left: 8px;
+   color: rgb(52, 52, 52);
+   font-family: Poppins;
+   font-size: 20px;
+   font-weight: 600;
+   line-height: 30px;
+   letter-spacing: 0%;
+   text-align: left;
+ }
+
+ .products .product-wrapper .product-desc2 {
+   width: 40px;
+   height: 20px;
+  display: flex;
+  flex-direction: row;
+
+  color: rgb(227, 192, 141);
+   font-family: Poppins;
+   font-size: 24px;
+   font-weight: 600;
+   line-height: 25px;
+   letter-spacing: 0%;
+   text-align: left;
+ }
+
+ .products .pagination-section {
+   position: relative;
+   width: 100%;
+   margin-top: 30px;
+   margin-bottom: 67px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+ }
+ 
+
+ .products .product-wrapper .no-data {
+   width: 100%;
+   height: 300px;  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-transform: capitalize;
+   font-family: "Pappins";
+   font-style: normal;
+   font-weight: 400;
+   font-size: 30px;
+   line-height: 34px;
+   color: #e3c08d;
+ }
+
+
+ 
+ .products .brands-logo {
+   width: 100%;
+   height: 630px;
+   display: flex;
+   background: rgb(13, 21, 24);
+
+ }
+
+ .products .brands-logo .logo-frame{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 58px;
+ }
+
+ .products .brands-logo .logo-frame .logo-text{
+   /* margin-top: 84px; */
+   color: rgb(227, 192, 141);
+font-family: Roboto;
+font-size: 36px;
+font-weight: 700;
+line-height: 42px;
+letter-spacing: 0%;
+text-align: left;
+ }
+
+ .products .brands-logo .logo-frame .image-frame{
+   width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 58px;
+ }
+
+ .products .brands-logo .logo-frame .image-frame .image-shadow{
+   position: relative;
+  width: 258px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 86px;
+
+  border-radius: 20px;
+
+box-shadow: 0px 0px 22px 0px rgb(228, 212, 212);
+background: rgb(13, 21, 24);
+}
+
+.products .brands-logo .logo-frame .image-frame .image-shadow img{ 
+   position: absolute;
+  width: 238px;
+  height: 329px;
+
+  border-radius: 16px;
+
+box-shadow: inset 0px 4px 16px 0px rgba(242, 189, 87, 0.04),inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25),inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+background: url("/public/img/gurme.webp");
+}
+
+ .products .address {
+   width: 100%;
+
+   background: rgb(248, 248, 255);
+ }
+
+ .products .address .adress-area{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   
+   align-items: center;
+   margin-top: 47px;
+   margin-bottom: 89px;
+ }
+
+ .products .address .adress-area .title{
+   color: rgb(52, 52, 52);
+   font-family: Roboto Serif;
+   font-size: 36px;
+   font-weight: 600;
+   line-height: 42px;
+   letter-spacing: 0%;
+   text-align: left;
+ }
+
+ 
+  /* Chosen Product  */
