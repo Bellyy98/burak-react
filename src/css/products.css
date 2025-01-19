@@ -16,6 +16,7 @@
 }
 
 .products .avatar-big-box {
+   margin-left: 423px;
     width: 820px;
     height: 46px;
     margin-top: 83px;
@@ -72,12 +73,12 @@
  .products .dishes-filter-section {
     width: 260px;
     height: 36px;
-
-    margin-top: 71px;
-    margin-left: 500px;
+   margin-left: 946px;
+    margin-top: 110px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
  }
 
  .products .dishes-filter-section .order{
@@ -112,6 +113,7 @@
     display: flex;
     flex-direction: row;
     border-radius: 8px;
+    transform: rotate(-90deg);
  }
 
  .products .product-wrapper {
@@ -141,8 +143,7 @@
    height: 275px;
 
    border-radius: 0px 50px 0px 0px;
-   
-   background: rgb(196, 196, 196);
+   background-size: cover;
  }
 
  .products .product-wrapper .product-img::before {
@@ -176,6 +177,8 @@
    position: absolute;
    width: 90px;
    height: 30px;
+
+   margin: 10px 0 0 10px;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -337,7 +340,7 @@ text-align: left;
  }
 
  .products .brands-logo .logo-frame .image-frame{
-   width: 100%;
+      width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -347,7 +350,7 @@ text-align: left;
  .products .brands-logo .logo-frame .image-frame .image-shadow{
    position: relative;
   width: 258px;
-  height: 350px;
+  height: 335px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -361,7 +364,7 @@ background: rgb(13, 21, 24);
 
 .products .brands-logo .logo-frame .image-frame .image-shadow img{ 
    position: absolute;
-  width: 238px;
+  width: 230px;
   height: 329px;
 
   border-radius: 16px;
