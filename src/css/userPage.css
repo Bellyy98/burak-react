@@ -1,0 +1,337 @@
+.user-page {
+	width: 100%;
+	height: auto;
+	display: flex;
+	background: #f8f8ff;
+}
+
+.user-page .css-heg063-MuiTabs-flexContainer {
+	flex-direction: column;
+}
+
+.user-page .css-mn3ro6-MuiTabs-indicator {
+	height: 0px;
+	width: 0px;
+}
+
+.user-page .css-1ujnqem-MuiTabs-root {
+	width: 100%;
+}
+
+.user-page .my-page-frame {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	padding: 50px 0 50px 0;
+}
+
+.my-page-frame .my-page-left {
+	width: 70%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.my-page-left .menu-name {
+	width: 100%;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	border-bottom: 1px solid #f8f8ff;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 45px;
+	color: #f8f8ff;
+}
+
+.my-page-left .menu-content {
+	margin-top: 10px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.my-page-left .write-content {
+	margin-top: 10px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.user-page .menu-content .post-content {
+	margin-top: 10px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.my-page-frame .my-page-right {
+	margin-left: 30px;
+	width: 30%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.user-page .order-info-box {
+	position: relative;
+	padding: 20px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #f6f2ff;
+	box-shadow: 15px 14px 4px rgba(0, 0, 0, 0.25), inset -1px 0px 16px 13px rgb(24 23 112 / 20%);
+	border-radius: 16px;
+}
+
+.user-page .order-info-box .settings-btn {
+	position: absolute;
+	top: 6%;
+	right: 19%;
+	cursor: pointer;
+}
+
+.user-page .order-info-box .order-user-img {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.user-page .order-info-box .order-user-img .order-user-avatar {
+	width: 150px;
+	height: 150px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 37px;
+}
+
+.user-page .order-info-box .order-user-icon-box {
+	position: absolute;
+	padding: 5px;
+	width: 37px;
+	height: 37px;
+	top: 81%;
+	right: 0;
+	display: flex;
+	background: rgb(209 209 209 / 33%);
+	border-radius: 37px;
+}
+
+.user-page .order-info-box .order-user-name {
+	margin-top: 10px;
+	font-family: 'Commissioner';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 36px;
+	color: #08090d;
+}
+
+.user-page .order-info-box .order-user-prof {
+	font-family: 'Commissioner';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 36px;
+	color: #a1a1a1;
+}
+
+.user-page .order-info-box .user-media-box {
+	margin-top: 10px;
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.user-page .order-info-box .user-desc {
+	margin-top: 30px;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	font-family: 'DM Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: #616164;
+}
+
+.user-page .order-info-box .css-1e3kzd4-MuiButtonBase-root-MuiButton-root {
+	margin-top: 15px;
+	min-width: 90%;
+	height: 44px;
+	text-transform: capitalize;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 38px;
+	color: #f8f8ff;
+}
+
+.user-page .menu-box img {
+	width: 25px;
+}
+
+.user-page .menu-box span {
+	margin-left: 30px;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 38px;
+	color: #000000;
+}
+
+.user-page .settings {
+	width: 95%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.user-page .settings .input-frame {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.user-page .settings .short-input {
+	width: 49%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.user-page .settings .long-input {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+.user-page .settings .spec-label {
+	font-family: 'Source Serif Pro';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 25px;
+	color: #f8f8ff;
+}
+
+.user-page .settings .spec-input {
+	position: relative;
+	margin-top: 10px;
+	padding-left: 20px;
+	width: 100%;
+	height: 54px;
+	border: none;
+	background: #f7f7f7;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	font-family: 'GT Walsheim Pro';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 26px;
+	color: #4f547b;
+}
+
+.user-page .settings .spec-textarea {
+	position: relative;
+	margin-top: 10px;
+	padding: 20px;
+	width: 100%;
+	height: 200px;
+	border: none;
+	background: #f7f7f7;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	font-family: 'GT Walsheim Pro';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 26px;
+	color: #4f547b;
+}
+
+.user-page .settings .member-media-frame {
+	margin-top: 25px;
+	position: relative;
+	padding: 10px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	border-radius: 5px;
+}
+
+.user-page .settings .member-media-frame .mb-image {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.user-page .settings .media-change-box {
+	position: relative;
+	margin-left: 20px;
+	width: auto;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.user-page .settings .media-change-box span {
+	font-family: 'GT Walsheim Pro';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 18px;
+	color: #140342;
+}
+
+.user-page .settings .media-change-box p {
+	margin: 10px 0px 14px 0px;
+	font-family: 'GT Walsheim Pro';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: #4f547b;
+}
+
+.user-page .settings .up-del-box {
+	position: relative;
+	width: 37px;
+	height: 37px;
+	display: flex;
+	background: #cbcbcb;
+	border-radius: 8px;
+	justify-content: center;
+	align-items: center;
+}
+
+.user-page .settings .up-del-box input {
+	position: absolute;
+	width: 20px;
+	height: 16px;
+	padding: 0;
+	background: red;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+.user-page .settings .save-box {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 25px;
+}
