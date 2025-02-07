@@ -6,7 +6,8 @@ import { useEffect, useState } from "react";
 export default function HomeNavbar () {
     const authMember = false;
     const [count, setCount] = useState<number>(0)
-    const [value, setValue] = useState<boolean>(true)
+    const [value, setValue] = useState<any>({status: true})
+   
     useEffect(() => {
     console.log("componentDidMount",count) 
     setCount(count + 1)  
@@ -15,7 +16,9 @@ export default function HomeNavbar () {
 
     // HANDLER 
     const buttonHandler = () => {
-        setValue(!value)
+        value.status = !value.status
+        console.log(value)
+        setValue({value}) // ishladi ammo status true boldi no ishladi
     }
 
     return (
