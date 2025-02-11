@@ -254,7 +254,6 @@ color: rgb(215, 181, 134);
     display: flex;
     box-shadow: 0px -8px 90px rgb(215 215 255);
     transform: scale(1.7);  
-    /* transform: scale(1.7);  video ni polniy ekran qilip beradi scale */
     overflow: hidden;
 }
 
@@ -340,7 +339,7 @@ justify-content: space-between;
 
 
 
-** EVENTS **/
+/* ** EVENTS **/
 
 .homepage .events-frame {
   width: 100%;

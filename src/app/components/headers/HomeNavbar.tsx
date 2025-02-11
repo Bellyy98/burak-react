@@ -18,7 +18,7 @@ export default function HomeNavbar () {
     const buttonHandler = () => {
         value.status = !value.status
         console.log(value)
-        setValue({value}) // ishladi ammo status true boldi no ishladi
+        setValue({...value}) // ishladi ammo status true boldi no ishladi
     }
 
     return (
