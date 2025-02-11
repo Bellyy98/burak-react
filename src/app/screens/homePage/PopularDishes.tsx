@@ -16,7 +16,7 @@ import { createSelector } from "reselect";
 import { retrievPopularDishes } from "./selector";
 import { Product } from "../../../lib/types/product";
 import { ProductCollection } from "../../../lib/enums/product.enum";
-import { serverApp } from "../../../lib/config";
+import { serverApi } from "../../../lib/config";
 
 /** REDUX SLICE & SELECTOR */
 
@@ -38,7 +38,7 @@ export default function PopularDishes() {
           <Stack className="cards-frame">
             {popularDishes.length !== 0 ? (
               popularDishes.map((product: Product) => {
-                const imagePath = `${serverApp}/${product.productImages[0]}`;
+                const imagePath = `${serverApi}/${product.productImages[0]}`;
                 return (
                   <CssVarsProvider key={product._id}>
                     <Card className="card">
