@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Container, Divider, Stack } from "@mui/material";
 import Devider from "../../components/divider/index"
+import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
 
 export default function Statistics () {
     return (
