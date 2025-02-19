@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/app.css";
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import {} from "@mui/icons-material";
+import { FamilyRestroomTwoTone } from "@mui/icons-material";
 import { Route, Switch, useLocation } from "react-router-dom";
 import HomePage from "./screens/homePage";
 import ProductsPage from "./screens/productsPage";
@@ -9,44 +9,47 @@ import UserPage from "./screens/userPage";
 import HomeNavbar from "./components/headers/HomeNavbar";
 import OtherNavbar from "./components/headers/OtherNavbar";
 import Footer from "./components/footer";
-import "../css/app.css";
-import "../css/navbar.css";
-import "../css/footer.css";
 import HelpPage from "./screens/helpPage";
 import OrdersPage from "./screens/ordersPage";
 import Test from "./screens/Test";
-import { CartItem } from "../lib/types/search";
+import useBasket from "./hooks/useBasket";
+import AuthenticationModal from "./components/auth";
+import "../css/app.css";
+import "../css/navbar.css";
+import "../css/footer.css";
 
 function App() {
   const location = useLocation();
 
-  const cartJson: string | null = localStorage.getItem("cartData");
-  const currentCart = cartJson ? JSON.parse(cartJson) : [];
-  const [cartItems, setCartItems] = useState<CartItem[]>(currentCart);
+  const { cartItems, onAdd, onRemove, onDelete, onDeleteAll } = useBasket();
+  const [signupOpen, setSignupOpen] = useState<boolean>(false)
+  const [loginOpen, setLoginOpen] = useState<boolean>(false)
 
-  /** Handlers */
-  const onAdd = (input: CartItem) => {
-    const exist: any = cartItems.find(
-      (item: CartItem) => item._id === input._id
-    );
-    if (exist) {
-      const cartUpdate = cartItems.map((item: CartItem) =>
-        item._id === input._id
-          ? { ...exist, quantity: exist.quantity + 1 }
-          : item
-      );
-      setCartItems(cartUpdate);
-      localStorage.setItem("cartData", JSON.stringify(cartUpdate));
-    } else {
-      const cartUpdate = [...cartItems, { ...input }];
-      setCartItems(cartUpdate);
-      localStorage.setItem("cartData", JSON.stringify(cartUpdate));
-    }
-  };
+
+  /** HANDLER */
+
+  const handleSignupClose = () => setSignupOpen(false)
+  const handleLoginClose = () => setLoginOpen(false)
 
   return (
     <>
-      {location.pathname === "/" ? <HomeNavbar cartItems={cartItems} /> : <OtherNavbar cartItems={cartItems} />}
+      {location.pathname === "/" ? (
+        <HomeNavbar
+          cartItems={cartItems}
+          onAdd={onAdd}
+          onRemove={onRemove}
+          onDelete={onDelete}
+          onDeleteAll={onDeleteAll}
+        />
+      ) : (
+        <OtherNavbar
+          cartItems={cartItems}
+          onAdd={onAdd}
+          onRemove={onRemove}
+          onDelete={onDelete}
+          onDeleteAll={onDeleteAll}
+        />
+      )}
       <Switch>
         <Route path="/products">
           <ProductsPage onAdd={onAdd} />
@@ -65,6 +68,13 @@ function App() {
         </Route>
       </Switch>
       <Footer />
+
+      <AuthenticationModal
+        signupOpen= {signupOpen}
+        loginOpen= {loginOpen}
+        handleLoginClose={handleLoginClose}
+        handleSignupClose={handleSignupClose}
+       />
     </>
   );
 }
