@@ -55,17 +55,17 @@ export default function PausedOrders(props: PausedOrdersProps) {
   };
 
 
-  const processOrderHandler = async (e: T) => {
+  const processOrderHandler = async (e: T, orderId: string) => {
     try {
       if(!authMember) throw new Error(Messages.error2)
         // PAYMENT Process
 
-      const orderId = e.target.value
+      
       const input: OrderUpdateInput = {
         orderId: orderId,
         orderStatus: OrderStatus.PROCESS,
       };
-
+      
       const confirmation = window.confirm("Do you want to proceed with payment?")
       if(confirmation) {
         const order = new OrderService()
@@ -92,6 +92,7 @@ export default function PausedOrders(props: PausedOrdersProps) {
                   const product: Product = order.productData.filter(
                     (ele: Product) => item.productId === ele._id
                   )[0];
+                  console.log("order121212", product)
                   const imagePath = `${serverApi}/${product.productImages[0]}`;
                   return (
                     <Stack key={item._id} className="order-top-frame1">
@@ -150,7 +151,7 @@ export default function PausedOrders(props: PausedOrdersProps) {
                   variant="contained"
                   className="pay-button"
                   value={order._id}
-                onClick={processOrderHandler}
+                onClick={(e:any) => processOrderHandler(e,order._id) }
                 >
                   <span>Payment</span>
                 </Button>

@@ -34,12 +34,12 @@ export default function ProcessOrders(props: ProcessOrdersProps) {
 
   // HANDLER
 
-  const finishOrderHandler = async (e: T) => {
+  const finishOrderHandler = async (e: T, orderId: string) => {
     try {
       if (!authMember) throw new Error(Messages.error2);
       // PAYMENT Process
 
-      const orderId = e.target.value;
+      
       const input: OrderUpdateInput = {
         orderId: orderId,
         orderStatus: OrderStatus.FINISH,
@@ -122,7 +122,8 @@ export default function ProcessOrders(props: ProcessOrdersProps) {
                   <Button
                     className="pay-button1"
                     value={order._id}
-                    onClick={finishOrderHandler}
+                    onClick={(e:any) => finishOrderHandler(e,order._id) }
+                   
                     variant="contained"
                   >
                     <span className="span-proces">Verify to Fulfil</span>
