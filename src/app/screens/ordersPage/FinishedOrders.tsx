@@ -5,25 +5,43 @@ import TabPanel from "@mui/lab/TabPanel";
 import moment from "moment";
 import { Box, Stack } from "@mui/material";
 
+import { useSelector } from "react-redux";
+import { createSelector } from "reselect";
+import { retrieveFinishedOrders, retrievePausedOrders } from "./selector";
+import { serverApi } from "../../../lib/config";
+import { Order, OrderItem } from "../../../lib/types/order";
+import { Product } from "../../../lib/types/product";
+
+/** REDUX SLICE & SELECTOR */
+const finishedOrdersRetriever = createSelector(
+  retrieveFinishedOrders,
+  (finishedOrders) => ({ finishedOrders }))
+
 export default function FinishedOrders() {
+  const { finishedOrders } = useSelector(finishedOrdersRetriever);
+
   return ( 
     <Stack className="all-order-collections">
     <TabPanel value="3">
-      {[].map((ele, index) => {
+    {finishedOrders?.map((order: Order) => {
         return (
-          <Stack key={index} className="order-collection-frame">
+          <Stack key={order._id} className="order-collection-frame">
           <Stack className="order-collection-top">
-            {[1, 2,3].map((ele2, index2) => {
+          {order?.orderItems?.map((item: OrderItem) => {
+                  const product: Product = order.productData.filter(
+                    (ele: Product) => item.productId === ele._id
+                  )[0];
+                  const imagePath = `${serverApi}/${product.productImages[0]}`
               return (
-                <Stack key={index2} className="order-top-frame1">
-              <img src="/img/lavash.webp" className="order-dish-img" />
-              <Box className="top-collection-dish">Lavash</Box>
+                <Stack key={item._id} className="order-top-frame1">
+              <img src={imagePath} className="order-dish-img" />
+              <Box className="top-collection-dish">{product.productName}</Box>
               <Stack className="top-calculate-frame">
-                <span>$9</span>
+              <span>${item.itemPrice}</span>
                 <img src="/icons/close.svg" />
-                <span>2</span>
+                <span>{item.itemQuantity}</span>
                 <img src="/icons/pause.svg" />
-                <span style={{ marginLeft: "15px" }}>$24</span>
+                <span style={{ marginLeft: "15px" }}>${item.itemQuantity * item.itemPrice}</span>
               </Stack>
             </Stack>
               )
@@ -32,19 +50,19 @@ export default function FinishedOrders() {
           <Stack className="order-collection-bottom">
             <Stack className="order-collection-bottom-left">
               <span>Product price</span>
-              <span>$18</span>
+              <span>${order.orderTotal - order.orderDelivery}</span>
               <img
                 src="/icons/plus.svg"
                 style={{ marginLeft: "20px", height: "17px", width: "17px" }}
               />
               <span>Delivery cost</span>
-              <span>2</span>
+              <span>${order.orderDelivery}</span>
               <img
                 src="/icons/pause.svg"
                 style={{ marginLeft: "20px", height: "17px", width: "17px" }}
               />
               <span>Total</span>
-              <span>$20</span>
+              <span>${order.orderTotal}</span>
             </Stack>
            
           
@@ -52,14 +70,14 @@ export default function FinishedOrders() {
         </Stack>
         )
       })}
-     {true && (
+     {!finishedOrders ||  (finishedOrders.length === 0 && (
         <Box display={"flex"} flexDirection={"row"} justifyContent={"center"}>
           <img
             src="/icons/noimage-list.svg"
             style={{ width: 300, height: 300 }}
           />
         </Box>
-      )}
+      ))}
     </TabPanel>
   </Stack>
   );
